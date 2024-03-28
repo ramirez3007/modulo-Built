@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "c51f45e6-e9f5-4604-987a-16256d96773f",
+		"name": "API - DC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33242489"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/comics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"comics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/comics/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"comics",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"nombre\": \"Green Arrow\",\r\n    \"edad\": 32,\r\n    \"ciudad\": \"Star City\",\r\n    \"poderes\": [\"Experto arquero\", \"Combate cuerpo a cuerpo\", \"Tácticas de combate\"],\r\n    \"aliados\": {\r\n        \"nombre\": [\"Black Canary\", \"Speedy\", \"Arsenal\"],\r\n        \"tipo\": \"Humanos\"\r\n    },\r\n    \"enemigos\": [\"Merlyn\", \"Deathstroke\", \"Komodo\"],\r\n    \"primera_aparicion\": \"More Fun Comics #73\",\r\n    \"hobbies\": [\"Arquería\", \"Activismo\", \"Resolución de crímenes\"],\r\n    \"activo\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/comics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"comics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Batman Actualizado\",\r\n  \"edad\": 36,\r\n  \"ciudad\": \"Gotham\",\r\n  \"poderes\": [\r\n    \"Inteligencia\",\r\n    \"Habilidad en combate\",\r\n    \"Tecnología avanzada\"\r\n  ],\r\n  \"aliados\": {\r\n    \"nombre\": [\r\n      \"Robin\",\r\n      \"Alfred\",\r\n      \"Batgirl\",\r\n      \"Catwoman\"\r\n    ],\r\n    \"tipo\": \"Humanos\"\r\n  },\r\n  \"enemigos\": [\r\n    \"Joker\",\r\n    \"Penguin\",\r\n    \"Two-Face\",\r\n    \"Riddler\"\r\n  ],\r\n  \"primera_aparicion\": \"Detective Comics #27\",\r\n  \"hobbies\": [\r\n    \"Entrenamiento\",\r\n    \"Investigación\",\r\n    \"Conducción\",\r\n    \"Resolución de misterios\"\r\n  ],\r\n  \"activo\": true\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/comics/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"comics",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destroy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/comics/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"comics",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
